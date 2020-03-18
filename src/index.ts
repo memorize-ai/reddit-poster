@@ -6,7 +6,7 @@ const bots = (
 
 const main = async (submissionId: string) => {
 	await Promise.all(bots.map(bot => {
-		bot.getSubreddit('').getSubmission(submissionId).upvote()
+		bot.getSubmission(submissionId).upvote()
 	}))
 }
 
